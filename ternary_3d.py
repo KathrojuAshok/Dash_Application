@@ -9,10 +9,6 @@ import os
 import pandas as pd
 import numpy as np
 from statistics import mode
-#from geopy.geocoders import Nominatim
-#from geopy.distance import geodesic
-#import folium 
-#from folium.plugins import MarkerCluster
 import dash
 import dash_table
 import dash_core_components as dcc
