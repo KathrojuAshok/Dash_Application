@@ -29,35 +29,7 @@ os.chdir("D:\Dash")
 
 data=pd.read_csv("studentdata_lat_lon.csv")
 del data['Unnamed: 0']
-"""
 
-df2=pd.read_csv("studentdata.csv")
-
-df2['address']=np.nan
-
-
-
-for i in df1["distance"].unique():
-    for j in df2["Distance(Km)"].unique():
-        if i==j:
-           
-            df2.loc[df2['Distance(Km)']==i,"address"]=df1.loc[df1['distance']==j,"address"].iloc[0]
-            
-            
-
-lat=[]
-lon=[]
-for i in df2['address']:
-    geolocator=Nominatim(timeout=3)
-    location=geolocator.geocode(i,timeout=10)
-    lat.append(location.latitude)
-    lon.append(location.longitude)           
-    
-df2['lat']=lat
-df2['lon']=lon  
-
-df2.to_csv("studentdata_lat_lon.csv") 
-"""
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
     
